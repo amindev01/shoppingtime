@@ -51,11 +51,11 @@ const Product = ({
 
   useEffect(() => {
     handleProductHasNoAttributes();
-  }, []);
+  }, [handleProductHasNoAttributes]);
 
   useEffect(() => {
     handleProductHasNoAttributes();
-  }, []);
+  }, [handleProductHasNoAttributes]);
 
   useEffect(() => {
     filterCurrency(item, selectedCurrency);

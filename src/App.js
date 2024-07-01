@@ -200,10 +200,12 @@ const App = () => {
 
     // Update cart quantity
     if (updatedProductList.length <= 1) {
-      updatedProductList.map((item) => {
+      updatedProductList.forEach((item) => {
         localStorage.setItem('productsQuantity', JSON.stringify(item.quantity));
         setProductsQuantity(item.quantity);
       });
+    
+    
     } else {
       const productListArray = updatedProductList.map((item) => item.quantity);
       const sum = productListArray.reduce((a, b) => a + b, 0);
@@ -257,8 +259,8 @@ const App = () => {
 
     // Update cart quantity
     if (updatedProductList.length <= 1) {
-      updatedProductList.map((item) => {
-        localStorage.setItem('productsQuantity', JSON.stringify(item.quantity));
+      updatedProductList.forEach((item) => {
+          localStorage.setItem('productsQuantity', JSON.stringify(item.quantity));
         setProductsQuantity(item.quantity);
       });
     } else {
